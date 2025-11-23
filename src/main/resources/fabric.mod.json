@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "testmod",
+	"version": "${version}",
+	"name": "Test Mod",
+	"description": "This is a test for modding!",
+	"authors": [
+		"Finley Baynham!"
+	],
+	"contact": {
+		"homepage": "https://finleybaynham.net",
+		"sources": "https://github.com/FinzHere/TestModThingymajig"
+	},
+	"license": "MIT",
+	"icon": "assets/testmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.finley.testmod.TestMod"
+		],
+		"fabric-datagen": [
+			"net.finley.testmod.TestModDataGenerator"
+		],
+      "client": [
+        "net.finley.testmod.TestModClient"
+      ]
+	},
+	"mixins": [
+		"testmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
